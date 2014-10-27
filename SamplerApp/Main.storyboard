@@ -16,40 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-Xn-cIp">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkM-mg-efz">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="66" width="400" height="477"/>
                                 </variation>
                             </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Wg-NP-WWf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1L3-Rr-xtA">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="41" width="400" height="30"/>
+                                    <rect key="frame" x="0.0" y="28" width="400" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="Osx-Kk-TJ4" eventType="editingDidEndOnExit" id="Olo-9Y-CPt"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Fc8-Xn-cIp"/>
-                                <exclude reference="6Wg-NP-WWf"/>
+                                <exclude reference="MkM-mg-efz"/>
+                                <exclude reference="1L3-Rr-xtA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Fc8-Xn-cIp"/>
-                                <include reference="6Wg-NP-WWf"/>
+                                <include reference="MkM-mg-efz"/>
+                                <include reference="1L3-Rr-xtA"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Web" id="FP3-gI-QJQ"/>
                     <connections>
-                        <outlet property="urlTextField" destination="6Wg-NP-WWf" id="Tal-DG-4Pc"/>
-                        <outlet property="webView" destination="Fc8-Xn-cIp" id="MDM-7v-bDA"/>
+                        <outlet property="urlTextField" destination="1L3-Rr-xtA" id="0nK-sG-l73"/>
+                        <outlet property="webView" destination="MkM-mg-efz" id="rhI-mj-ntD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCb-yW-b7l" userLabel="First Responder" sceneMemberID="firstResponder"/>

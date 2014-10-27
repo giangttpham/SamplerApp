@@ -18,11 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.urlTextField setReturnKeyType:UIReturnKeyDone];
     // Do any additional setup after loading the view.
     NSString *urlText = @"http://www.google.com";
     NSURL *url = [NSURL URLWithString:urlText];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
+    self.urlTextField.text = @"http://www.google.com";
     
 }
 
@@ -31,11 +33,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)configureView {
-//    NSURL *url = _urlTextField.text;
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    [self.webView loadRequest:request];
-//}
+- (IBAction)textFieldDoneEditing:(id)sender {
+    [sender resignFirstResponder];
+    NSString *urlText = [self.urlTextField text];
+    NSURL *url = [NSURL URLWithString:urlText];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+
+}
+
 /*
 #pragma mark - Navigation
 
