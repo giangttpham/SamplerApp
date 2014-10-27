@@ -91,5 +91,11 @@ numberOfRowsInComponent:(NSInteger)component {
         self.foodSlider.value = row * self.foodSliderIncrement;
     }
 }
+- (IBAction)foodSliderChanged:(id)sender {
+    int row = roundf(self.foodSlider.value / self.foodSliderIncrement);
+    [self.foodPicker selectRow:row
+                        inComponent:kFoodComponent
+                            animated:YES];
+}
 
 @end

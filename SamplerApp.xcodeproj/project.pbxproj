@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED53498E19F71744001A4DEA /* FoodTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED53498D19F71744001A4DEA /* FoodTabViewController.m */; };
 		ED61639C19FEC1DB00A3CEE7 /* WebTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED61639B19FEC1DB00A3CEE7 /* WebTabViewController.m */; };
+		ED6163D119FEE26600A3CEE7 /* SegmentTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6163D019FEE26600A3CEE7 /* SegmentTabViewController.m */; };
 		EDD35DD619F5D40C008DC1B2 /* fooddictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD35DD519F5D40C008DC1B2 /* fooddictionary.plist */; };
 		EDF9138E19F5A6DC0075993B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF9138D19F5A6DC0075993B /* main.m */; };
 		EDF9139119F5A6DC0075993B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF9139019F5A6DC0075993B /* AppDelegate.m */; };
@@ -34,6 +35,8 @@
 		ED53498D19F71744001A4DEA /* FoodTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTabViewController.m; sourceTree = "<group>"; };
 		ED61639A19FEC1DB00A3CEE7 /* WebTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebTabViewController.h; sourceTree = "<group>"; };
 		ED61639B19FEC1DB00A3CEE7 /* WebTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebTabViewController.m; sourceTree = "<group>"; };
+		ED6163CF19FEE26600A3CEE7 /* SegmentTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentTabViewController.h; sourceTree = "<group>"; };
+		ED6163D019FEE26600A3CEE7 /* SegmentTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentTabViewController.m; sourceTree = "<group>"; };
 		EDD35DD519F5D40C008DC1B2 /* fooddictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fooddictionary.plist; sourceTree = "<group>"; };
 		EDF9138819F5A6DC0075993B /* SamplerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamplerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF9138C19F5A6DC0075993B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				ED53498D19F71744001A4DEA /* FoodTabViewController.m */,
 				ED61639A19FEC1DB00A3CEE7 /* WebTabViewController.h */,
 				ED61639B19FEC1DB00A3CEE7 /* WebTabViewController.m */,
+				ED6163CF19FEE26600A3CEE7 /* SegmentTabViewController.h */,
+				ED6163D019FEE26600A3CEE7 /* SegmentTabViewController.m */,
 			);
 			path = SamplerApp;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF9139119F5A6DC0075993B /* AppDelegate.m in Sources */,
+				ED6163D119FEE26600A3CEE7 /* SegmentTabViewController.m in Sources */,
 				ED61639C19FEC1DB00A3CEE7 /* WebTabViewController.m in Sources */,
 				EDF9138E19F5A6DC0075993B /* main.m in Sources */,
 				ED53498E19F71744001A4DEA /* FoodTabViewController.m in Sources */,

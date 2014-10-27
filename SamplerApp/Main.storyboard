@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Web-->
+        <!--Web Tab-->
         <scene sceneID="EGg-QD-cNO">
             <objects>
                 <viewController id="Osx-Kk-TJ4" customClass="WebTabViewController" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="66" width="400" height="477"/>
+                                    <rect key="frame" x="0.0" y="58" width="400" height="493"/>
                                 </variation>
                             </webView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1L3-Rr-xtA">
@@ -49,7 +49,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Web" id="FP3-gI-QJQ"/>
+                    <tabBarItem key="tabBarItem" title="Web Tab" id="FP3-gI-QJQ"/>
                     <connections>
                         <outlet property="urlTextField" destination="1L3-Rr-xtA" id="0nK-sG-l73"/>
                         <outlet property="webView" destination="MkM-mg-efz" id="rhI-mj-ntD"/>
@@ -57,9 +57,118 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCb-yW-b7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565.5" y="1890"/>
+            <point key="canvasLocation" x="565.5" y="1562"/>
         </scene>
-        <!--Food-->
+        <!--Segment Tab-->
+        <scene sceneID="VbD-RE-BvO">
+            <objects>
+                <viewController id="LeW-vS-a3a" customClass="SegmentTabViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JUZ-6c-I1O"/>
+                        <viewControllerLayoutGuide type="bottom" id="kDy-jf-EOi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hLp-qf-yaz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7ns-1U-FcL">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Progress"/>
+                                    <segment title="Text"/>
+                                    <segment title="Alert"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="381" width="400" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="toggleControls:" destination="LeW-vS-a3a" eventType="valueChanged" id="fad-Se-EKY"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPq-rM-M8J">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="76" y="284" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchChanged:" destination="LeW-vS-a3a" eventType="valueChanged" id="nv2-gu-vRy"/>
+                                </connections>
+                            </switch>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CJo-d8-cGW">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="290" width="20" height="20"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! I hope you're having a wonderful day." translatesAutoresizingMaskIntoConstraints="NO" id="J9G-hR-jfi">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="236" width="385" height="128"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV5-BY-5Zi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Click me!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="168" y="285" width="64" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="alertButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="RoH-r6-LPG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-Ub-Gbh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Done Editing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="156" y="187" width="88" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doneEdittingButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="jMO-sK-AZM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7ns-1U-FcL"/>
+                                <exclude reference="QPq-rM-M8J"/>
+                                <exclude reference="CJo-d8-cGW"/>
+                                <exclude reference="J9G-hR-jfi"/>
+                                <exclude reference="jV5-BY-5Zi"/>
+                                <exclude reference="5sa-Ub-Gbh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7ns-1U-FcL"/>
+                                <include reference="QPq-rM-M8J"/>
+                                <include reference="CJo-d8-cGW"/>
+                                <include reference="J9G-hR-jfi"/>
+                                <include reference="jV5-BY-5Zi"/>
+                                <include reference="5sa-Ub-Gbh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Segment Tab" id="9Sh-ys-JsM"/>
+                    <connections>
+                        <outlet property="alertButton" destination="jV5-BY-5Zi" id="4Bv-Ls-CXU"/>
+                        <outlet property="doneEditingButton" destination="5sa-Ub-Gbh" id="lDr-Lp-lFU"/>
+                        <outlet property="progressActivityIndicator" destination="CJo-d8-cGW" id="zf3-gP-eaU"/>
+                        <outlet property="progressSwitch" destination="QPq-rM-M8J" id="SMt-VA-SBa"/>
+                        <outlet property="textView" destination="J9G-hR-jfi" id="RW8-tf-h76"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3av-hH-c1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.5" y="2288"/>
+        </scene>
+        <!--Food Tab-->
         <scene sceneID="I9W-Kq-q7f">
             <objects>
                 <viewController id="W04-0e-fqB" customClass="FoodTabViewController" sceneMemberID="viewController">
@@ -86,6 +195,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="141" y="302" width="118" height="31"/>
                                 </variation>
+                                <connections>
+                                    <action selector="foodSliderChanged:" destination="W04-0e-fqB" eventType="valueChanged" id="IpZ-N8-rev"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -102,7 +214,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Food" id="UsG-GM-F2l"/>
+                    <tabBarItem key="tabBarItem" title="Food Tab" id="UsG-GM-F2l"/>
                     <connections>
                         <outlet property="foodPicker" destination="AHR-yP-mWQ" id="OaU-w4-fCo"/>
                         <outlet property="foodSlider" destination="thQ-zj-hDU" id="hKq-fH-muy"/>
@@ -110,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTY-Cr-5DO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565.5" y="1158"/>
+            <point key="canvasLocation" x="565.5" y="854"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ju1-Dg-KRp">
@@ -125,6 +237,7 @@
                     <connections>
                         <segue destination="W04-0e-fqB" kind="relationship" relationship="viewControllers" id="HOQ-4q-Tmn"/>
                         <segue destination="Osx-Kk-TJ4" kind="relationship" relationship="viewControllers" id="RRh-N5-LLJ"/>
+                        <segue destination="LeW-vS-a3a" kind="relationship" relationship="viewControllers" id="Rvd-re-ALu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEu-UL-vlo" userLabel="First Responder" sceneMemberID="firstResponder"/>
