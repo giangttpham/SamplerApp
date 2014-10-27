@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED53498E19F71744001A4DEA /* FoodTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED53498D19F71744001A4DEA /* FoodTabViewController.m */; };
+		ED61639C19FEC1DB00A3CEE7 /* WebTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED61639B19FEC1DB00A3CEE7 /* WebTabViewController.m */; };
+		EDD35DD619F5D40C008DC1B2 /* fooddictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD35DD519F5D40C008DC1B2 /* fooddictionary.plist */; };
 		EDF9138E19F5A6DC0075993B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF9138D19F5A6DC0075993B /* main.m */; };
 		EDF9139119F5A6DC0075993B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF9139019F5A6DC0075993B /* AppDelegate.m */; };
-		EDF9139419F5A6DC0075993B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF9139319F5A6DC0075993B /* ViewController.m */; };
-		EDF9139719F5A6DC0075993B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF9139519F5A6DC0075993B /* Main.storyboard */; };
 		EDF9139919F5A6DC0075993B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF9139819F5A6DC0075993B /* Images.xcassets */; };
 		EDF9139C19F5A6DC0075993B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF9139A19F5A6DC0075993B /* LaunchScreen.xib */; };
 		EDF913A819F5A6DC0075993B /* SamplerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF913A719F5A6DC0075993B /* SamplerAppTests.m */; };
+		EDF913B519F5A9500075993B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF913B419F5A9500075993B /* Main.storyboard */; };
+		EDF913B619F5A9500075993B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF913B419F5A9500075993B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED53498C19F71744001A4DEA /* FoodTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTabViewController.h; sourceTree = "<group>"; };
+		ED53498D19F71744001A4DEA /* FoodTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTabViewController.m; sourceTree = "<group>"; };
+		ED61639A19FEC1DB00A3CEE7 /* WebTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebTabViewController.h; sourceTree = "<group>"; };
+		ED61639B19FEC1DB00A3CEE7 /* WebTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebTabViewController.m; sourceTree = "<group>"; };
+		EDD35DD519F5D40C008DC1B2 /* fooddictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fooddictionary.plist; sourceTree = "<group>"; };
 		EDF9138819F5A6DC0075993B /* SamplerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamplerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF9138C19F5A6DC0075993B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF9138D19F5A6DC0075993B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDF9138F19F5A6DC0075993B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDF9139019F5A6DC0075993B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EDF9139219F5A6DC0075993B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EDF9139319F5A6DC0075993B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EDF9139619F5A6DC0075993B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDF9139819F5A6DC0075993B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EDF9139B19F5A6DC0075993B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EDF913A119F5A6DC0075993B /* SamplerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF913A619F5A6DC0075993B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF913A719F5A6DC0075993B /* SamplerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SamplerAppTests.m; sourceTree = "<group>"; };
+		EDF913B419F5A9500075993B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +89,15 @@
 			children = (
 				EDF9138F19F5A6DC0075993B /* AppDelegate.h */,
 				EDF9139019F5A6DC0075993B /* AppDelegate.m */,
-				EDF9139219F5A6DC0075993B /* ViewController.h */,
-				EDF9139319F5A6DC0075993B /* ViewController.m */,
-				EDF9139519F5A6DC0075993B /* Main.storyboard */,
 				EDF9139819F5A6DC0075993B /* Images.xcassets */,
 				EDF9139A19F5A6DC0075993B /* LaunchScreen.xib */,
 				EDF9138B19F5A6DC0075993B /* Supporting Files */,
+				EDF913B419F5A9500075993B /* Main.storyboard */,
+				EDD35DD519F5D40C008DC1B2 /* fooddictionary.plist */,
+				ED53498C19F71744001A4DEA /* FoodTabViewController.h */,
+				ED53498D19F71744001A4DEA /* FoodTabViewController.m */,
+				ED61639A19FEC1DB00A3CEE7 /* WebTabViewController.h */,
+				ED61639B19FEC1DB00A3CEE7 /* WebTabViewController.m */,
 			);
 			path = SamplerApp;
 			sourceTree = "<group>";
@@ -199,7 +208,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF9139719F5A6DC0075993B /* Main.storyboard in Resources */,
+				EDD35DD619F5D40C008DC1B2 /* fooddictionary.plist in Resources */,
+				EDF913B519F5A9500075993B /* Main.storyboard in Resources */,
 				EDF9139C19F5A6DC0075993B /* LaunchScreen.xib in Resources */,
 				EDF9139919F5A6DC0075993B /* Images.xcassets in Resources */,
 			);
@@ -209,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF913B619F5A9500075993B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF9139419F5A6DC0075993B /* ViewController.m in Sources */,
 				EDF9139119F5A6DC0075993B /* AppDelegate.m in Sources */,
+				ED61639C19FEC1DB00A3CEE7 /* WebTabViewController.m in Sources */,
 				EDF9138E19F5A6DC0075993B /* main.m in Sources */,
+				ED53498E19F71744001A4DEA /* FoodTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +256,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EDF9139519F5A6DC0075993B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDF9139619F5A6DC0075993B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EDF9139A19F5A6DC0075993B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +416,7 @@
 				EDF913AD19F5A6DC0075993B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDF913AE19F5A6DC0075993B /* Build configuration list for PBXNativeTarget "SamplerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				EDF913B019F5A6DC0075993B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
