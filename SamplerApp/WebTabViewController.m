@@ -10,7 +10,7 @@
 
 @interface WebTabViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *urlTextField;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *sampleWebView;
 
 @end
 
@@ -24,7 +24,7 @@
     NSString *urlText = [self.urlTextField text];
     NSURL *url = [NSURL URLWithString:urlText];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
+    [self.sampleWebView loadRequest:request];
     
     
 }
@@ -39,7 +39,7 @@
     NSString *urlText = [self.urlTextField text];
     NSURL *url = [NSURL URLWithString:urlText];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
+    [self.sampleWebView loadRequest:request];
 
 }
 

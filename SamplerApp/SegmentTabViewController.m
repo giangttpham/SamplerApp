@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *progressSwitch;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progressActivityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton * doneEditingButton;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextView *segmentTextView;
 @property (weak, nonatomic) IBOutlet UIButton *alertButton;
 @end
 
@@ -23,7 +23,7 @@
     // Do any additional setup after loading the view.
     self.progressSwitch.hidden = NO;
     self.progressActivityIndicator.hidden = NO;
-    self.textView.hidden = YES;
+    self.segmentTextView.hidden = YES;
     self.doneEditingButton.hidden = YES;
     self.alertButton.hidden = YES;
 }
@@ -36,21 +36,21 @@
     if (sender.selectedSegmentIndex == 0) {
         self.progressSwitch.hidden = NO;
         self.progressActivityIndicator.hidden = NO;
-        self.textView.hidden = YES;
+        self.segmentTextView.hidden = YES;
         self.doneEditingButton.hidden = YES;
         self.alertButton.hidden = YES;
     }
     else if (sender.selectedSegmentIndex == 1) {
         self.progressSwitch.hidden = YES;
         self.progressActivityIndicator.hidden = YES;
-        self.textView.hidden = NO;
+        self.segmentTextView.hidden = NO;
         self.doneEditingButton.hidden = NO;
         self.alertButton.hidden = YES;
     }
     else {
         self.progressSwitch.hidden = YES;
         self.progressActivityIndicator.hidden = YES;
-        self.textView.hidden = YES;
+        self.segmentTextView.hidden = YES;
         self.doneEditingButton.hidden = YES;
         self.alertButton.hidden = NO;
     }
@@ -67,7 +67,7 @@
    
 }
 - (IBAction)doneEdittingButtonPressed:(id)sender {
-    [self.textView resignFirstResponder];
+    [self.segmentTextView resignFirstResponder];
 }
 
 - (IBAction)alertButtonPressed:(id)sender {

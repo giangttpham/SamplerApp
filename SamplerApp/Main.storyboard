@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="448-KU-rfA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="448-KU-rfA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -8,164 +8,103 @@
         <scene sceneID="EGg-QD-cNO">
             <objects>
                 <viewController id="Osx-Kk-TJ4" customClass="WebTabViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Rq0-yF-V19"/>
-                        <viewControllerLayoutGuide type="bottom" id="kbk-Mv-hBf"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oFo-DB-qwG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1L3-Rr-xtA">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1L3-Rr-xtA">
+                                <rect key="frame" x="0.0" y="28" width="400" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="28" width="400" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="Osx-Kk-TJ4" eventType="editingDidEndOnExit" id="Olo-9Y-CPt"/>
                                 </connections>
                             </textField>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-OX-OAX">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="Ffi-FR-rxM">
+                                <rect key="frame" x="0.0" y="71" width="320" height="443"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="66" width="400" height="472"/>
-                                </variation>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="1L3-Rr-xtA"/>
-                                <exclude reference="zCO-OX-OAX"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="1L3-Rr-xtA"/>
-                                <include reference="zCO-OX-OAX"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Web Tab" image="webIcon" id="FP3-gI-QJQ"/>
                     <connections>
+                        <outlet property="sampleWebView" destination="Ffi-FR-rxM" id="CuJ-vP-yhK"/>
                         <outlet property="urlTextField" destination="1L3-Rr-xtA" id="0nK-sG-l73"/>
-                        <outlet property="webView" destination="zCO-OX-OAX" id="9UE-by-Hfk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCb-yW-b7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565.5" y="1562"/>
+            <point key="canvasLocation" x="301" y="1478"/>
         </scene>
         <!--Segment Tab-->
         <scene sceneID="VbD-RE-BvO">
             <objects>
                 <viewController id="LeW-vS-a3a" customClass="SegmentTabViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JUZ-6c-I1O"/>
-                        <viewControllerLayoutGuide type="bottom" id="kDy-jf-EOi"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hLp-qf-yaz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7ns-1U-FcL">
-                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="QPq-rM-M8J">
+                                <rect key="frame" x="43" y="92" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="LeW-vS-a3a" eventType="valueChanged" id="nv2-gu-vRy"/>
+                                </connections>
+                            </switch>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="CJo-d8-cGW">
+                                <rect key="frame" x="252" y="98" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! I hope you're having a wonderful day." id="J9G-hR-jfi">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jV5-BY-5Zi">
+                                <rect key="frame" x="128" y="93" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click me!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="RoH-r6-LPG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5sa-Ub-Gbh">
+                                <rect key="frame" x="116" y="93" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done Editing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneEdittingButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="jMO-sK-AZM"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! I hope you're having a wonderful day. ^____^" textAlignment="center" id="fpt-eV-rJy">
+                                <rect key="frame" x="4" y="156" width="312" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="7ns-1U-FcL">
+                                <rect key="frame" x="2" y="258" width="317" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Progress"/>
                                     <segment title="Text"/>
                                     <segment title="Alert"/>
                                 </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="381" width="400" height="29"/>
-                                </variation>
                                 <connections>
                                     <action selector="toggleControls:" destination="LeW-vS-a3a" eventType="valueChanged" id="fad-Se-EKY"/>
                                 </connections>
                             </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPq-rM-M8J">
-                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="284" width="51" height="31"/>
-                                </variation>
-                                <connections>
-                                    <action selector="switchChanged:" destination="LeW-vS-a3a" eventType="valueChanged" id="nv2-gu-vRy"/>
-                                </connections>
-                            </switch>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CJo-d8-cGW">
-                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="304" y="290" width="20" height="20"/>
-                                </variation>
-                            </activityIndicatorView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! I hope you're having a wonderful day." translatesAutoresizingMaskIntoConstraints="NO" id="J9G-hR-jfi">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-Ub-Gbh">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Done Editing">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="156" y="187" width="88" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="doneEdittingButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="jMO-sK-AZM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV5-BY-5Zi">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Click me!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="168" y="285" width="64" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="alertButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="RoH-r6-LPG"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! Hope you're having a wonderful day." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9ge-jn-7XT">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="230" width="385" height="128"/>
-                                </variation>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="7ns-1U-FcL"/>
-                                <exclude reference="QPq-rM-M8J"/>
-                                <exclude reference="CJo-d8-cGW"/>
-                                <exclude reference="J9G-hR-jfi"/>
-                                <exclude reference="5sa-Ub-Gbh"/>
-                                <exclude reference="jV5-BY-5Zi"/>
-                                <exclude reference="9ge-jn-7XT"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="7ns-1U-FcL"/>
-                                <include reference="QPq-rM-M8J"/>
-                                <include reference="CJo-d8-cGW"/>
-                                <include reference="J9G-hR-jfi"/>
-                                <include reference="5sa-Ub-Gbh"/>
-                                <include reference="jV5-BY-5Zi"/>
-                                <include reference="9ge-jn-7XT"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Segment Tab" image="segmentIcon" id="9Sh-ys-JsM"/>
                     <connections>
@@ -173,58 +112,38 @@
                         <outlet property="doneEditingButton" destination="5sa-Ub-Gbh" id="lDr-Lp-lFU"/>
                         <outlet property="progressActivityIndicator" destination="CJo-d8-cGW" id="zf3-gP-eaU"/>
                         <outlet property="progressSwitch" destination="QPq-rM-M8J" id="SMt-VA-SBa"/>
-                        <outlet property="textView" destination="9ge-jn-7XT" id="H0S-iV-1ph"/>
+                        <outlet property="segmentTextView" destination="fpt-eV-rJy" id="PqX-kd-Hax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3av-hH-c1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565.5" y="2288"/>
+            <point key="canvasLocation" x="301" y="2165"/>
         </scene>
         <!--Food Tab-->
         <scene sceneID="I9W-Kq-q7f">
             <objects>
                 <viewController id="W04-0e-fqB" customClass="FoodTabViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="buB-hb-HCT"/>
-                        <viewControllerLayoutGuide type="bottom" id="pIe-Vl-fFW"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JjJ-u0-pxb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-yP-mWQ">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="216"/>
-                                </variation>
+                            <pickerView contentMode="scaleToFill" id="AHR-yP-mWQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="W04-0e-fqB" id="IEI-y7-Ho8"/>
                                     <outlet property="delegate" destination="W04-0e-fqB" id="OCY-u1-pGQ"/>
                                 </connections>
                             </pickerView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="thQ-zj-hDU">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="302" width="118" height="31"/>
-                                </variation>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" id="thQ-zj-hDU">
+                                <rect key="frame" x="101" y="293" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="foodSliderChanged:" destination="W04-0e-fqB" eventType="valueChanged" id="IpZ-N8-rev"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="AHR-yP-mWQ"/>
-                                <exclude reference="thQ-zj-hDU"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="AHR-yP-mWQ"/>
-                                <include reference="thQ-zj-hDU"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Food Tab" image="foodIcon" id="UsG-GM-F2l"/>
                     <connections>
@@ -234,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTY-Cr-5DO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565.5" y="854"/>
+            <point key="canvasLocation" x="301" y="808"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ju1-Dg-KRp">
@@ -254,7 +173,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEu-UL-vlo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="1562"/>
+            <point key="canvasLocation" x="-132.26666666666665" y="1478.6933333333334"/>
         </scene>
     </scenes>
     <resources>
@@ -262,4 +181,9 @@
         <image name="segmentIcon" width="24" height="24"/>
         <image name="webIcon" width="24" height="24"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
