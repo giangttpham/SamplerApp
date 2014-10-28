@@ -13,7 +13,6 @@
 		EDD35DD619F5D40C008DC1B2 /* fooddictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD35DD519F5D40C008DC1B2 /* fooddictionary.plist */; };
 		EDF9138E19F5A6DC0075993B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF9138D19F5A6DC0075993B /* main.m */; };
 		EDF9139119F5A6DC0075993B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF9139019F5A6DC0075993B /* AppDelegate.m */; };
-		EDF9139919F5A6DC0075993B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF9139819F5A6DC0075993B /* Images.xcassets */; };
 		EDF9139C19F5A6DC0075993B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF9139A19F5A6DC0075993B /* LaunchScreen.xib */; };
 		EDF913A819F5A6DC0075993B /* SamplerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF913A719F5A6DC0075993B /* SamplerAppTests.m */; };
 		EDF913B519F5A9500075993B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF913B419F5A9500075993B /* Main.storyboard */; };
@@ -43,7 +42,6 @@
 		EDF9138D19F5A6DC0075993B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDF9138F19F5A6DC0075993B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDF9139019F5A6DC0075993B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EDF9139819F5A6DC0075993B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EDF9139B19F5A6DC0075993B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EDF913A119F5A6DC0075993B /* SamplerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF913A619F5A6DC0075993B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			children = (
 				EDF9138F19F5A6DC0075993B /* AppDelegate.h */,
 				EDF9139019F5A6DC0075993B /* AppDelegate.m */,
-				EDF9139819F5A6DC0075993B /* Images.xcassets */,
 				EDF9139A19F5A6DC0075993B /* LaunchScreen.xib */,
 				EDF9138B19F5A6DC0075993B /* Supporting Files */,
 				EDF913B419F5A9500075993B /* Main.storyboard */,
@@ -216,7 +213,6 @@
 				EDD35DD619F5D40C008DC1B2 /* fooddictionary.plist in Resources */,
 				EDF913B519F5A9500075993B /* Main.storyboard in Resources */,
 				EDF9139C19F5A6DC0075993B /* LaunchScreen.xib in Resources */,
-				EDF9139919F5A6DC0075993B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

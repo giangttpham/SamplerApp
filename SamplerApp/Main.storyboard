@@ -49,7 +49,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Web Tab" id="FP3-gI-QJQ"/>
+                    <tabBarItem key="tabBarItem" title="Web Tab" image="webIcon" id="FP3-gI-QJQ"/>
                     <connections>
                         <outlet property="urlTextField" destination="1L3-Rr-xtA" id="0nK-sG-l73"/>
                         <outlet property="webView" destination="YFE-ie-4bF" id="uId-bE-Xfh"/>
@@ -167,7 +167,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Segment Tab" id="9Sh-ys-JsM"/>
+                    <tabBarItem key="tabBarItem" title="Segment Tab" image="segmentIcon" id="9Sh-ys-JsM"/>
                     <connections>
                         <outlet property="alertButton" destination="jV5-BY-5Zi" id="4Bv-Ls-CXU"/>
                         <outlet property="doneEditingButton" destination="5sa-Ub-Gbh" id="lDr-Lp-lFU"/>
@@ -259,5 +259,7 @@
     </scenes>
     <resources>
         <image name="foodIcon" width="24" height="24"/>
+        <image name="segmentIcon" width="24" height="24"/>
+        <image name="webIcon" width="24" height="24"/>
     </resources>
 </document>
