@@ -27,11 +27,11 @@
                                     <action selector="textFieldDoneEditing:" destination="Osx-Kk-TJ4" eventType="editingDidEndOnExit" id="Olo-9Y-CPt"/>
                                 </connections>
                             </textField>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFE-ie-4bF">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-OX-OAX">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="66" width="400" height="477"/>
+                                    <rect key="frame" x="0.0" y="66" width="400" height="472"/>
                                 </variation>
                             </webView>
                         </subviews>
@@ -39,20 +39,20 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="1L3-Rr-xtA"/>
-                                <exclude reference="YFE-ie-4bF"/>
+                                <exclude reference="zCO-OX-OAX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="1L3-Rr-xtA"/>
-                                <include reference="YFE-ie-4bF"/>
+                                <include reference="zCO-OX-OAX"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Web Tab" id="FP3-gI-QJQ"/>
+                    <tabBarItem key="tabBarItem" title="Web Tab" image="webIcon" id="FP3-gI-QJQ"/>
                     <connections>
                         <outlet property="urlTextField" destination="1L3-Rr-xtA" id="0nK-sG-l73"/>
-                        <outlet property="webView" destination="YFE-ie-4bF" id="uId-bE-Xfh"/>
+                        <outlet property="webView" destination="zCO-OX-OAX" id="9UE-by-Hfk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCb-yW-b7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,15 +121,6 @@
                                     <action selector="doneEdittingButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="jMO-sK-AZM"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! I hope you're having a wonderful day." translatesAutoresizingMaskIntoConstraints="NO" id="6mQ-Bu-FjQ">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="236" width="385" height="128"/>
-                                </variation>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV5-BY-5Zi">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Click me!">
@@ -142,6 +133,15 @@
                                     <action selector="alertButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="RoH-r6-LPG"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! Hope you're having a wonderful day." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9ge-jn-7XT">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="230" width="385" height="128"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -151,8 +151,8 @@
                                 <exclude reference="CJo-d8-cGW"/>
                                 <exclude reference="J9G-hR-jfi"/>
                                 <exclude reference="5sa-Ub-Gbh"/>
-                                <exclude reference="6mQ-Bu-FjQ"/>
                                 <exclude reference="jV5-BY-5Zi"/>
+                                <exclude reference="9ge-jn-7XT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -162,18 +162,18 @@
                                 <include reference="CJo-d8-cGW"/>
                                 <include reference="J9G-hR-jfi"/>
                                 <include reference="5sa-Ub-Gbh"/>
-                                <include reference="6mQ-Bu-FjQ"/>
                                 <include reference="jV5-BY-5Zi"/>
+                                <include reference="9ge-jn-7XT"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Segment Tab" id="9Sh-ys-JsM"/>
+                    <tabBarItem key="tabBarItem" title="Segment Tab" image="segmentIcon" id="9Sh-ys-JsM"/>
                     <connections>
                         <outlet property="alertButton" destination="jV5-BY-5Zi" id="4Bv-Ls-CXU"/>
                         <outlet property="doneEditingButton" destination="5sa-Ub-Gbh" id="lDr-Lp-lFU"/>
                         <outlet property="progressActivityIndicator" destination="CJo-d8-cGW" id="zf3-gP-eaU"/>
                         <outlet property="progressSwitch" destination="QPq-rM-M8J" id="SMt-VA-SBa"/>
-                        <outlet property="textView" destination="6mQ-Bu-FjQ" id="jrT-JP-HAU"/>
+                        <outlet property="textView" destination="9ge-jn-7XT" id="H0S-iV-1ph"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3av-hH-c1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,5 +259,7 @@
     </scenes>
     <resources>
         <image name="foodIcon" width="24" height="24"/>
+        <image name="segmentIcon" width="24" height="24"/>
+        <image name="webIcon" width="24" height="24"/>
     </resources>
 </document>
