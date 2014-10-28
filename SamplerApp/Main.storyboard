@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkM-mg-efz">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="58" width="400" height="493"/>
-                                </variation>
-                            </webView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1L3-Rr-xtA">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -34,25 +27,32 @@
                                     <action selector="textFieldDoneEditing:" destination="Osx-Kk-TJ4" eventType="editingDidEndOnExit" id="Olo-9Y-CPt"/>
                                 </connections>
                             </textField>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFE-ie-4bF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="66" width="400" height="477"/>
+                                </variation>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="MkM-mg-efz"/>
                                 <exclude reference="1L3-Rr-xtA"/>
+                                <exclude reference="YFE-ie-4bF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="MkM-mg-efz"/>
                                 <include reference="1L3-Rr-xtA"/>
+                                <include reference="YFE-ie-4bF"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Web Tab" id="FP3-gI-QJQ"/>
                     <connections>
                         <outlet property="urlTextField" destination="1L3-Rr-xtA" id="0nK-sG-l73"/>
-                        <outlet property="webView" destination="MkM-mg-efz" id="rhI-mj-ntD"/>
+                        <outlet property="webView" destination="YFE-ie-4bF" id="uId-bE-Xfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCb-yW-b7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,6 +68,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kDy-jf-EOi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hLp-qf-yaz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7ns-1U-FcL">
@@ -105,7 +106,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="236" width="385" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-Ub-Gbh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Done Editing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="156" y="187" width="88" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doneEdittingButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="jMO-sK-AZM"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello there! I hope you're having a wonderful day." translatesAutoresizingMaskIntoConstraints="NO" id="6mQ-Bu-FjQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="236" width="385" height="128"/>
                                 </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV5-BY-5Zi">
@@ -120,18 +142,6 @@
                                     <action selector="alertButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="RoH-r6-LPG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-Ub-Gbh">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Done Editing">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="156" y="187" width="88" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="doneEdittingButtonPressed:" destination="LeW-vS-a3a" eventType="touchUpInside" id="jMO-sK-AZM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -140,8 +150,9 @@
                                 <exclude reference="QPq-rM-M8J"/>
                                 <exclude reference="CJo-d8-cGW"/>
                                 <exclude reference="J9G-hR-jfi"/>
-                                <exclude reference="jV5-BY-5Zi"/>
                                 <exclude reference="5sa-Ub-Gbh"/>
+                                <exclude reference="6mQ-Bu-FjQ"/>
+                                <exclude reference="jV5-BY-5Zi"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -150,8 +161,9 @@
                                 <include reference="QPq-rM-M8J"/>
                                 <include reference="CJo-d8-cGW"/>
                                 <include reference="J9G-hR-jfi"/>
-                                <include reference="jV5-BY-5Zi"/>
                                 <include reference="5sa-Ub-Gbh"/>
+                                <include reference="6mQ-Bu-FjQ"/>
+                                <include reference="jV5-BY-5Zi"/>
                             </mask>
                         </variation>
                     </view>
@@ -161,7 +173,7 @@
                         <outlet property="doneEditingButton" destination="5sa-Ub-Gbh" id="lDr-Lp-lFU"/>
                         <outlet property="progressActivityIndicator" destination="CJo-d8-cGW" id="zf3-gP-eaU"/>
                         <outlet property="progressSwitch" destination="QPq-rM-M8J" id="SMt-VA-SBa"/>
-                        <outlet property="textView" destination="J9G-hR-jfi" id="RW8-tf-h76"/>
+                        <outlet property="textView" destination="6mQ-Bu-FjQ" id="jrT-JP-HAU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3av-hH-c1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -214,7 +226,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Food Tab" id="UsG-GM-F2l"/>
+                    <tabBarItem key="tabBarItem" title="Food Tab" image="foodIcon" id="UsG-GM-F2l"/>
                     <connections>
                         <outlet property="foodPicker" destination="AHR-yP-mWQ" id="OaU-w4-fCo"/>
                         <outlet property="foodSlider" destination="thQ-zj-hDU" id="hKq-fH-muy"/>
@@ -245,4 +257,7 @@
             <point key="canvasLocation" x="-248" y="1562"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="foodIcon" width="24" height="24"/>
+    </resources>
 </document>
