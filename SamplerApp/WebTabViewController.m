@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.urlTextField setReturnKeyType:UIReturnKeyDone];
-    // Do any additional setup after loading the view.
+
+    //load google.com upon loading view
     self.urlTextField.text = @"http://www.google.com";
     NSString *urlText = [self.urlTextField text];
     NSURL *url = [NSURL URLWithString:urlText];
@@ -35,6 +36,7 @@
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {
+    //close keyboard and load the appropriate webpage based on entered URL
     [sender resignFirstResponder];
     NSString *urlText = [self.urlTextField text];
     NSURL *url = [NSURL URLWithString:urlText];
@@ -43,14 +45,5 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

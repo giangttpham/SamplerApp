@@ -12,9 +12,9 @@
 #define kFoodComponent 1
 
 @interface FoodTabViewController ()
+@property int foodSliderIncrement;
 @property (weak, nonatomic) IBOutlet UIPickerView *foodPicker;
 @property (weak, nonatomic) IBOutlet UISlider *foodSlider;
-@property int foodSliderIncrement;
 @property (strong, nonatomic) NSDictionary *countryFood;
 @property (strong, nonatomic) NSArray *countries;
 @property (strong, nonatomic) NSArray *food;
@@ -24,26 +24,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    //get the fooddictionary.plist file from resources folder
     NSBundle *bundle = [NSBundle mainBundle];
     NSURL *plistURL = [bundle URLForResource:@"fooddictionary"
                                withExtension:@"plist"];
+    
+    //create NSDictionary object from plist file
     self.countryFood = [NSDictionary
                       dictionaryWithContentsOfURL:plistURL];
     NSArray *allCountries = [self.countryFood allKeys];
     NSArray *sortedCountries = [allCountries sortedArrayUsingSelector:
                              @selector(compare:)];
     self.countries = sortedCountries;
+    
+    //automatically display first country and first dish
     NSString *selectedCountry = self.countries[0];
     self.food = self.countryFood[selectedCountry];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-
 
 
 #pragma mark -
@@ -53,6 +55,7 @@
     return 2;
 }
 
+//return count of country component or food component
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component {
     if (component == kCountryComponent) {
@@ -63,6 +66,7 @@ numberOfRowsInComponent:(NSInteger)component {
     }
 }
 
+//return the title for country or food selection
 #pragma mark Picker Delegate Methods
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
@@ -74,10 +78,13 @@ numberOfRowsInComponent:(NSInteger)component {
         return self.food[row];
     }
 }
+
+
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component
 {
+    //load the food of the selected country
     if (component == kCountryComponent) {
         NSString *selectedCountry = self.countries[row];
         self.food = self.countryFood[selectedCountry];
@@ -87,10 +94,13 @@ numberOfRowsInComponent:(NSInteger)component {
                                animated:YES];
         self.foodSlider.value = 0;
     }
+    //adjust slider appropriately if a food is selected
     else {
         self.foodSlider.value = row * self.foodSliderIncrement;
     }
 }
+
+// spin picker wheel to appropriate food type when slider moves
 - (IBAction)foodSliderChanged:(id)sender {
     int row = roundf(self.foodSlider.value / self.foodSliderIncrement);
     [self.foodPicker selectRow:row

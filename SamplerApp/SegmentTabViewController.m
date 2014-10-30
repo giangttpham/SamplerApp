@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    //show Progress features upon loading view
     self.progressSwitch.hidden = NO;
     self.progressActivityIndicator.hidden = NO;
     self.segmentTextView.hidden = YES;
@@ -32,6 +33,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+// show/hide features according to selected option
 - (IBAction)toggleControls:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {
         self.progressSwitch.hidden = NO;
@@ -57,20 +60,26 @@
         
         
 }
+
+// in Progress option
 - (IBAction)switchChanged:(UISwitch *)sender {
+    //on/off switch reponds to start/stop activity indicator respectively
     BOOL setting = sender.isOn;
     [self.progressSwitch setOn:setting animated:YES];
     if (self.progressSwitch.on)
         [self.progressActivityIndicator startAnimating];
     else
         [self.progressActivityIndicator stopAnimating];
-   
 }
+
+// in Text option
 - (IBAction)doneEdittingButtonPressed:(id)sender {
     [self.segmentTextView resignFirstResponder];
 }
 
+// in Alert option
 - (IBAction)alertButtonPressed:(id)sender {
+    //show message when button is pressed
     NSString *message = @"Do you like iPhone?";
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"Alert message"
@@ -81,14 +90,5 @@
     [alert show];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
